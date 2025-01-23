@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-23T12:01:12.911637" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Calculator" source="C:\Users\Administrateur\Desktop\Appium-Init-\tests\test_calculator.robot">
-<test id="s1-t1" name="Launch Calculator And Perform Basic Operations" line="5">
-<kw name="Start Appium Session" owner="appium_keywords">
-<kw name="Open Application">
-<msg time="2025-01-23T12:01:12.942564" level="FAIL">No keyword with name 'Open Application' found.</msg>
-<arg>${APPIUM_SERVER}</arg>
-<arg>platformName=${PLATFORM_NAME}</arg>
-<arg>platformVersion=${PLATFORM_VERSION}</arg>
-<arg>deviceName=${DEVICE_NAME}</arg>
-<arg>automationName=${AUTOMATION_NAME}</arg>
-<arg>appPackage=${APP_PACKAGE}[yt]</arg>
-<arg>appActivity=${APP_ACTIVITY}[yt]</arg>
-<status status="FAIL" start="2025-01-23T12:01:12.942537" elapsed="0.000070">No keyword with name 'Open Application' found.</status>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-23T16:19:50.472426" rpa="false" schemaversion="5">
+<suite id="s1" name="Apidemos" source="C:\Users\Administrateur\Desktop\Appium-Init-\tests\apidemos.robot">
+<test id="s1-t1" name="Scenario: Launch and verify the home screen" line="8">
+<kw name="Given I Launch The App" owner="apidemo_keywords">
+<msg time="2025-01-23T16:19:50.514360" level="FAIL">Variable '${APP_PACKAGE_API}' not found.</msg>
+<arg>${APP_PACKAGE_API}</arg>
+<arg>${APP_ACTIVITY_API}</arg>
+<doc>Launch the application.</doc>
+<status status="FAIL" start="2025-01-23T16:19:50.513984" elapsed="0.000415">Variable '${APP_PACKAGE_API}' not found.</status>
 </kw>
-<doc>Démarrer une session Appium en utilisant la configuration.</doc>
-<status status="FAIL" start="2025-01-23T12:01:12.941760" elapsed="0.000951">No keyword with name 'Open Application' found.</status>
-</kw>
-<doc>Lancer la calculatrice et effectuer des opérations de base.</doc>
-<status status="FAIL" start="2025-01-23T12:01:12.941065" elapsed="0.001847">No keyword with name 'Open Application' found.</status>
+<doc>Test the app launches correctly and verify the home screen appears</doc>
+<status status="FAIL" start="2025-01-23T16:19:50.513113" elapsed="0.001600">Variable '${APP_PACKAGE_API}' not found.</status>
 </test>
-<status status="FAIL" start="2025-01-23T12:01:12.912703" elapsed="0.031692"/>
+<status status="FAIL" start="2025-01-23T16:19:50.473705" elapsed="0.042347"/>
 </suite>
 <statistics>
 <total>
@@ -29,11 +21,13 @@
 <tag>
 </tag>
 <suite>
-<stat name="Test Calculator" id="s1" pass="0" fail="1" skip="0">Test Calculator</stat>
+<stat name="Apidemos" id="s1" pass="0" fail="1" skip="0">Apidemos</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-01-23T12:01:12.938229" level="ERROR">Error in file 'C:\Users\Administrateur\Desktop\Appium-Init-\resources\keywords\appium_keywords.robot' on line 2: Resource file '..\resources\variables.resource' does not exist.</msg>
-<msg time="2025-01-23T12:01:12.939466" level="ERROR">Error in file 'C:\Users\Administrateur\Desktop\Appium-Init-\resources\keywords\appium_keywords.robot' on line 3: Resource file '..\resources\libraries.resource' does not exist.</msg>
+<msg time="2025-01-23T16:19:50.499767" level="ERROR">Error in file 'C:\Users\Administrateur\Desktop\Appium-Init-\resources\keywords\appium_keywords.robot' on line 2: Resource file '..\resources\variables.resource' does not exist.</msg>
+<msg time="2025-01-23T16:19:50.500954" level="ERROR">Error in file 'C:\Users\Administrateur\Desktop\Appium-Init-\resources\keywords\appium_keywords.robot' on line 3: Resource file '..\resources\libraries.resource' does not exist.</msg>
+<msg time="2025-01-23T16:19:50.508972" level="ERROR">Error in file 'C:\Users\Administrateur\Desktop\Appium-Init-\resources\keywords\apidemo_keywords.robot' on line 2: Resource file '..\resources\variables.resource' does not exist.</msg>
+<msg time="2025-01-23T16:19:50.510782" level="ERROR">Error in file 'C:\Users\Administrateur\Desktop\Appium-Init-\resources\keywords\apidemo_keywords.robot' on line 3: Resource file '..\resources\libraries.resource' does not exist.</msg>
 </errors>
 </robot>

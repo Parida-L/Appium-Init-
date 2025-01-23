@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-23T14:40:22.910648" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-23T16:30:36.438895" rpa="false" schemaversion="5">
 <suite id="s1" name="Appium-Init-" source="C:\Users\Administrateur\Desktop\Appium-Init-">
 <suite id="s1-s1" name="Tests" source="C:\Users\Administrateur\Desktop\Appium-Init-\tests">
-<suite id="s1-s1-s1" name="Calculator" source="C:\Users\Administrateur\Desktop\Appium-Init-\tests\calculator.robot">
-<test id="s1-s1-s1-t1" name="Scenario: Division" line="24">
-<kw name="Given I Have Opened The Calculator" owner="appium_keywords">
+<suite id="s1-s1-s1" name="Apidemos" source="C:\Users\Administrateur\Desktop\Appium-Init-\tests\apidemos.robot">
+<test id="s1-s1-s1-t1" name="Scenario: Launch and verify the home screen" line="8">
+<kw name="Given I Launch The App" owner="apidemo_keywords">
 <kw name="Start Appium Session" owner="appium_keywords">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>${APPIUM_SERVER}</arg>
@@ -21,88 +21,54 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2025-01-23T14:40:23.114277" elapsed="9.853889"/>
+<status status="PASS" start="2025-01-23T16:30:36.623251" elapsed="7.051978"/>
 </kw>
 <arg>${app_package}</arg>
 <arg>${app_activity}</arg>
 <doc>Démarrer une session Appium en utilisant la configuration.</doc>
-<status status="PASS" start="2025-01-23T14:40:23.113261" elapsed="9.855154"/>
+<status status="PASS" start="2025-01-23T16:30:36.622819" elapsed="7.053014"/>
 </kw>
-<arg>${APP_PACKAGE_CALC}</arg>
-<arg>${APP_ACTIVITY_CALC}</arg>
-<doc>Ouvrir l'application calculatrice.</doc>
-<status status="PASS" start="2025-01-23T14:40:23.111396" elapsed="9.857143"/>
+<arg>${APP_PACKAGE_API}</arg>
+<arg>${APP_ACTIVITY_API}</arg>
+<doc>Launch the application.</doc>
+<status status="PASS" start="2025-01-23T16:30:36.621016" elapsed="7.055000"/>
 </kw>
-<kw name="When I Divide ${number_1} By ${number_2}" owner="appium_keywords" source_name="I Divide ${number_1} By ${number_2}">
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-01-23T14:40:32.973275" level="INFO">Clicking element 'id=com.google.android.calculator:id/digit_8'.</msg>
-<msg time="2025-01-23T14:40:34.903450" level="INFO">criteria is com.google.android.calculator:id/digit_8</msg>
-<arg>id=com.google.android.calculator:id/digit_${num1}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-01-23T14:40:32.971966" elapsed="1.931729"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-01-23T14:40:34.905042" level="INFO">Clicking element 'id=com.google.android.calculator:id/op_div'.</msg>
-<msg time="2025-01-23T14:40:35.495620" level="INFO">criteria is com.google.android.calculator:id/op_div</msg>
-<arg>id=com.google.android.calculator:id/op_div</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-01-23T14:40:34.903918" elapsed="0.591920"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-01-23T14:40:35.497173" level="INFO">Clicking element 'id=com.google.android.calculator:id/digit_2'.</msg>
-<msg time="2025-01-23T14:40:36.160974" level="INFO">criteria is com.google.android.calculator:id/digit_2</msg>
-<arg>id=com.google.android.calculator:id/digit_${num2}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-01-23T14:40:35.496016" elapsed="0.665324"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-01-23T14:40:36.162589" level="INFO">Clicking element 'id=com.google.android.calculator:id/eq'.</msg>
-<msg time="2025-01-23T14:40:36.959565" level="INFO">criteria is com.google.android.calculator:id/eq</msg>
-<arg>id=com.google.android.calculator:id/eq</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-01-23T14:40:36.161500" elapsed="0.798298"/>
-</kw>
-<arg>${NUMBER_1}[div]</arg>
-<arg>${NUMBER_2}[div]</arg>
-<doc>Diviser deux nombres.</doc>
-<status status="PASS" start="2025-01-23T14:40:32.969878" elapsed="3.990074"/>
-</kw>
-<kw name="Then The Result Should Be ${result}" owner="appium_keywords" source_name="The Result Should Be ${expected_result}">
+<kw name="When The Logo Appears" owner="apidemo_keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2025-01-23T14:40:37.019000" level="INFO">criteria is com.google.android.calculator:id/result_final</msg>
-<arg>id=com.google.android.calculator:id/result_final</arg>
+<msg time="2025-01-23T16:30:45.148217" level="INFO">xpath criteria: //android.widget.TextView[@text="API Demos"]</msg>
+<arg>//android.widget.TextView[@text="API Demos"]</arg>
 <arg>timeout=5</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-01-23T14:40:36.962589" elapsed="0.056599"/>
+<status status="PASS" start="2025-01-23T16:30:43.679505" elapsed="1.468906"/>
 </kw>
-<kw name="Get Element Attribute" owner="AppiumLibrary">
-<msg time="2025-01-23T14:40:37.071422" level="INFO">Element 'id=com.google.android.calculator:id/result_final' attribute 'text' value '4' </msg>
-<msg time="2025-01-23T14:40:37.071669" level="INFO">criteria is com.google.android.calculator:id/result_final</msg>
-<msg time="2025-01-23T14:40:37.071844" level="INFO">${actual_result} = 4</msg>
-<var>${actual_result}</var>
-<arg>id=com.google.android.calculator:id/result_final</arg>
-<arg>text</arg>
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<status status="PASS" start="2025-01-23T14:40:37.019359" elapsed="0.052618"/>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>text=API Demos</arg>
+<arg>timeout=5</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2025-01-23T16:30:45.148574" elapsed="0.064892"/>
 </kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${actual_result}</arg>
-<arg>${expected_result}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-01-23T14:40:37.072149" elapsed="0.000454"/>
+<doc>Verify the logo appears.</doc>
+<status status="PASS" start="2025-01-23T16:30:43.677931" elapsed="1.535739"/>
 </kw>
-<arg>${RESULT}[div]</arg>
-<doc>Vérifier le résultat.</doc>
-<status status="PASS" start="2025-01-23T14:40:36.961072" elapsed="0.111670"/>
+<kw name="Then The Home Screen Should Be Visible" owner="apidemo_keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-01-23T16:30:45.317938" level="INFO">criteria is android:id/list</msg>
+<arg>android:id/list</arg>
+<arg>timeout=5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-01-23T16:30:45.215948" elapsed="0.102222"/>
 </kw>
-<doc>Divide two numbers</doc>
-<status status="PASS" start="2025-01-23T14:40:23.109989" elapsed="13.964209"/>
+<doc>Verify the home screen is visible.</doc>
+<status status="PASS" start="2025-01-23T16:30:45.215065" elapsed="0.103265"/>
+</kw>
+<doc>Test the app launches correctly and verify the home screen appears</doc>
+<status status="PASS" start="2025-01-23T16:30:36.619953" elapsed="8.699352"/>
 </test>
-<status status="PASS" start="2025-01-23T14:40:22.937247" elapsed="14.138559"/>
+<status status="PASS" start="2025-01-23T16:30:36.465915" elapsed="8.854772"/>
 </suite>
-<status status="PASS" start="2025-01-23T14:40:22.934556" elapsed="14.142833"/>
+<status status="PASS" start="2025-01-23T16:30:36.462640" elapsed="8.859236"/>
 </suite>
-<status status="PASS" start="2025-01-23T14:40:22.914573" elapsed="14.163862"/>
+<status status="PASS" start="2025-01-23T16:30:36.442928" elapsed="8.880059"/>
 </suite>
 <statistics>
 <total>
@@ -113,7 +79,7 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 <suite>
 <stat name="Appium-Init-" id="s1" pass="1" fail="0" skip="0">Appium-Init-</stat>
 <stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Appium-Init-.Tests</stat>
-<stat name="Calculator" id="s1-s1-s1" pass="1" fail="0" skip="0">Appium-Init-.Tests.Calculator</stat>
+<stat name="Apidemos" id="s1-s1-s1" pass="1" fail="0" skip="0">Appium-Init-.Tests.Apidemos</stat>
 </suite>
 </statistics>
 <errors>
