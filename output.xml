@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-23T12:01:12.911637" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Calculator" source="C:\Users\Administrateur\Desktop\Appium-Init-\tests\test_calculator.robot">
+<test id="s1-t1" name="Launch Calculator And Perform Basic Operations" line="5">
+<kw name="Start Appium Session" owner="appium_keywords">
+<kw name="Open Application">
+<msg time="2025-01-23T12:01:12.942564" level="FAIL">No keyword with name 'Open Application' found.</msg>
+<arg>${APPIUM_SERVER}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}[yt]</arg>
+<arg>appActivity=${APP_ACTIVITY}[yt]</arg>
+<status status="FAIL" start="2025-01-23T12:01:12.942537" elapsed="0.000070">No keyword with name 'Open Application' found.</status>
+</kw>
+<doc>Démarrer une session Appium en utilisant la configuration.</doc>
+<status status="FAIL" start="2025-01-23T12:01:12.941760" elapsed="0.000951">No keyword with name 'Open Application' found.</status>
+</kw>
+<doc>Lancer la calculatrice et effectuer des opérations de base.</doc>
+<status status="FAIL" start="2025-01-23T12:01:12.941065" elapsed="0.001847">No keyword with name 'Open Application' found.</status>
+</test>
+<status status="FAIL" start="2025-01-23T12:01:12.912703" elapsed="0.031692"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Calculator" id="s1" pass="0" fail="1" skip="0">Test Calculator</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-01-23T12:01:12.938229" level="ERROR">Error in file 'C:\Users\Administrateur\Desktop\Appium-Init-\resources\keywords\appium_keywords.robot' on line 2: Resource file '..\resources\variables.resource' does not exist.</msg>
+<msg time="2025-01-23T12:01:12.939466" level="ERROR">Error in file 'C:\Users\Administrateur\Desktop\Appium-Init-\resources\keywords\appium_keywords.robot' on line 3: Resource file '..\resources\libraries.resource' does not exist.</msg>
+</errors>
+</robot>
