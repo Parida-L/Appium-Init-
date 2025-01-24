@@ -22,3 +22,6 @@ ${APP_ACTIVITY_CALC}   com.android.calculator2.Calculator
 #API DEMO
 ${APP_PACKAGE_API}     io.appium.android.apis
 ${APP_ACTIVITY_API}    io.appium.android.apis.ApiDemos
+${APP_PATH}            C:/Users/Administrateur/AppData/Local/Android/Sdk/platform-tools/ApiDemos-debug.apk
+
+@{DOG_NAMES_TO_CHECK}    Ace    Bandit    Cha-Cha    Deuce

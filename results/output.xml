@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-23T16:30:36.438895" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-24T15:12:20.218843" rpa="false" schemaversion="5">
 <suite id="s1" name="Appium-Init-" source="C:\Users\Administrateur\Desktop\Appium-Init-">
 <suite id="s1-s1" name="Tests" source="C:\Users\Administrateur\Desktop\Appium-Init-\tests">
 <suite id="s1-s1-s1" name="Apidemos" source="C:\Users\Administrateur\Desktop\Appium-Init-\tests\apidemos.robot">
-<test id="s1-s1-s1-t1" name="Scenario: Launch and verify the home screen" line="8">
-<kw name="Given I Launch The App" owner="apidemo_keywords">
+<test id="s1-s1-s1-t1" name="Scenario: Verify the expandability of the element" line="26">
+<kw name="Given I Interact With The Custom Adapter" owner="apidemo_keywords">
+<kw name="I Launch The APIDemos App" owner="apidemo_keywords">
 <kw name="Start Appium Session" owner="appium_keywords">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>${APPIUM_SERVER}</arg>
@@ -21,54 +22,402 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2025-01-23T16:30:36.623251" elapsed="7.051978"/>
-</kw>
-<arg>${app_package}</arg>
-<arg>${app_activity}</arg>
-<doc>Démarrer une session Appium en utilisant la configuration.</doc>
-<status status="PASS" start="2025-01-23T16:30:36.622819" elapsed="7.053014"/>
+<status status="PASS" start="2025-01-24T15:12:20.431386" elapsed="7.150846"/>
 </kw>
 <arg>${APP_PACKAGE_API}</arg>
 <arg>${APP_ACTIVITY_API}</arg>
+<doc>Démarrer une session Appium en utilisant la configuration.</doc>
+<status status="PASS" start="2025-01-24T15:12:20.430994" elapsed="7.151557"/>
+</kw>
 <doc>Launch the application.</doc>
-<status status="PASS" start="2025-01-23T16:30:36.621016" elapsed="7.055000"/>
+<status status="PASS" start="2025-01-24T15:12:20.430282" elapsed="7.152428"/>
 </kw>
-<kw name="When The Logo Appears" owner="apidemo_keywords">
+<kw name="I Interact With The Custom Adapter Of The Expandable Lists" owner="apidemo_keywords">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-01-24T15:12:27.584449" level="INFO">Clicking element '//android.widget.TextView[@content-desc="Views"]'.</msg>
+<msg time="2025-01-24T15:12:30.561744" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Views"]</msg>
+<arg>//android.widget.TextView[@content-desc="Views"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-01-24T15:12:27.583425" elapsed="2.978593"/>
+</kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2025-01-23T16:30:45.148217" level="INFO">xpath criteria: //android.widget.TextView[@text="API Demos"]</msg>
-<arg>//android.widget.TextView[@text="API Demos"]</arg>
+<msg time="2025-01-24T15:12:30.629621" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Expandable Lists"]</msg>
+<arg>//android.widget.TextView[@content-desc="Expandable Lists"]</arg>
 <arg>timeout=5</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-01-23T16:30:43.679505" elapsed="1.468906"/>
+<status status="PASS" start="2025-01-24T15:12:30.562209" elapsed="0.067601"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="AppiumLibrary">
-<arg>text=API Demos</arg>
-<arg>timeout=5</arg>
-<doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" start="2025-01-23T16:30:45.148574" elapsed="0.064892"/>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-01-24T15:12:30.631151" level="INFO">Clicking element '//android.widget.TextView[@content-desc="Expandable Lists"]'.</msg>
+<msg time="2025-01-24T15:12:32.080231" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Expandable Lists"]</msg>
+<arg>//android.widget.TextView[@content-desc="Expandable Lists"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-01-24T15:12:30.630001" elapsed="1.450427"/>
 </kw>
-<doc>Verify the logo appears.</doc>
-<status status="PASS" start="2025-01-23T16:30:43.677931" elapsed="1.535739"/>
-</kw>
-<kw name="Then The Home Screen Should Be Visible" owner="apidemo_keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2025-01-23T16:30:45.317938" level="INFO">criteria is android:id/list</msg>
-<arg>android:id/list</arg>
+<msg time="2025-01-24T15:12:32.137155" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="1. Custom Adapter"]</msg>
+<arg>//android.widget.TextView[@content-desc="1. Custom Adapter"]</arg>
 <arg>timeout=5</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-01-23T16:30:45.215948" elapsed="0.102222"/>
+<status status="PASS" start="2025-01-24T15:12:32.080599" elapsed="0.056808"/>
 </kw>
-<doc>Verify the home screen is visible.</doc>
-<status status="PASS" start="2025-01-23T16:30:45.215065" elapsed="0.103265"/>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-01-24T15:12:32.138783" level="INFO">Clicking element '//android.widget.TextView[@content-desc="1. Custom Adapter"]'.</msg>
+<msg time="2025-01-24T15:12:33.578126" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="1. Custom Adapter"]</msg>
+<arg>//android.widget.TextView[@content-desc="1. Custom Adapter"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-01-24T15:12:32.137604" elapsed="1.440776"/>
 </kw>
-<doc>Test the app launches correctly and verify the home screen appears</doc>
-<status status="PASS" start="2025-01-23T16:30:36.619953" elapsed="8.699352"/>
+<doc>Interact with the custom adapter of the "Expandable Lists" menu.</doc>
+<status status="PASS" start="2025-01-24T15:12:27.583016" elapsed="5.995513"/>
+</kw>
+<doc>Interact with the custom adapter of the "Expandable Lists" menu.</doc>
+<status status="PASS" start="2025-01-24T15:12:20.427918" elapsed="13.150725"/>
+</kw>
+<kw name="When I Click On A Names List" owner="apidemo_keywords">
+<kw name="Verify Names Do Not Appear" owner="apidemo_keywords">
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-24T15:12:33.582727" level="INFO">Verifying that "Ace" does not appear on the page.</msg>
+<arg>Verifying that "${name}" does not appear on the page.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-24T15:12:33.582547" elapsed="0.000307"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" owner="AppiumLibrary">
+<arg>${name}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until `text` disappears from current page.</doc>
+<status status="PASS" start="2025-01-24T15:12:33.582966" elapsed="0.039790"/>
+</kw>
+<var name="${name}">Ace</var>
+<status status="PASS" start="2025-01-24T15:12:33.582413" elapsed="0.040477"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-24T15:12:33.623485" level="INFO">Verifying that "Bandit" does not appear on the page.</msg>
+<arg>Verifying that "${name}" does not appear on the page.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-24T15:12:33.623254" elapsed="0.000375"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" owner="AppiumLibrary">
+<arg>${name}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until `text` disappears from current page.</doc>
+<status status="PASS" start="2025-01-24T15:12:33.623750" elapsed="0.024971"/>
+</kw>
+<var name="${name}">Bandit</var>
+<status status="PASS" start="2025-01-24T15:12:33.623024" elapsed="0.025888"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-24T15:12:33.649602" level="INFO">Verifying that "Cha-Cha" does not appear on the page.</msg>
+<arg>Verifying that "${name}" does not appear on the page.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-24T15:12:33.649350" elapsed="0.000413"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" owner="AppiumLibrary">
+<arg>${name}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until `text` disappears from current page.</doc>
+<status status="PASS" start="2025-01-24T15:12:33.649871" elapsed="0.020462"/>
+</kw>
+<var name="${name}">Cha-Cha</var>
+<status status="PASS" start="2025-01-24T15:12:33.649092" elapsed="0.021530"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-24T15:12:33.671205" level="INFO">Verifying that "Deuce" does not appear on the page.</msg>
+<arg>Verifying that "${name}" does not appear on the page.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-24T15:12:33.670944" elapsed="0.000399"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" owner="AppiumLibrary">
+<arg>${name}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until `text` disappears from current page.</doc>
+<status status="PASS" start="2025-01-24T15:12:33.671446" elapsed="0.024231"/>
+</kw>
+<var name="${name}">Deuce</var>
+<status status="PASS" start="2025-01-24T15:12:33.670731" elapsed="0.025093"/>
+</iter>
+<var>${name}</var>
+<value>@{names_to_check}</value>
+<status status="PASS" start="2025-01-24T15:12:33.582227" elapsed="0.113645"/>
+</for>
+<arg>@{expected_names}</arg>
+<doc>Verify that the names do not appear on the page.</doc>
+<status status="PASS" start="2025-01-24T15:12:33.581957" elapsed="0.114001"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-01-24T15:12:33.697305" level="INFO">Clicking element '//android.widget.TextView[@text="Dog Names"]'.</msg>
+<msg time="2025-01-24T15:12:34.390417" level="INFO">xpath criteria: //android.widget.TextView[@text="Dog Names"]</msg>
+<arg>//android.widget.TextView[@text="Dog Names"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-01-24T15:12:33.696248" elapsed="0.694486"/>
+</kw>
+<arg>@{DOG_NAMES_TO_CHECK}</arg>
+<doc>Click on a names list.</doc>
+<status status="PASS" start="2025-01-24T15:12:33.580122" elapsed="0.810798"/>
+</kw>
+<kw name="Then Corresponding Names Appears" owner="apidemo_keywords">
+<kw name="Get Webelements" owner="AppiumLibrary">
+<msg time="2025-01-24T15:12:34.438863" level="INFO">xpath criteria: //android.widget.TextView</msg>
+<msg time="2025-01-24T15:12:34.439202" level="INFO">@{actual_names_elements} = [ &lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff00000042")&gt; | &lt;appium.webdriver.webelement.WebElement (session="1cbdee95...</msg>
+<var>@{actual_names_elements}</var>
+<arg>//android.widget.TextView</arg>
+<doc>Returns list of [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] objects matching ``locator``.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.395388" elapsed="0.043956"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-01-24T15:12:34.439861" level="INFO">${actual_names} = []</msg>
+<var>${actual_names}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.439523" elapsed="0.000437"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2025-01-24T15:12:34.464839" level="INFO">Element '&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff00000042")&gt;' attribute 'text' value 'Views/Expandable Lists/1. Custom Adapter' </msg>
+<msg time="2025-01-24T15:12:34.465337" level="INFO">${text} = Views/Expandable Lists/1. Custom Adapter</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<arg>text</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2025-01-24T15:12:34.440579" elapsed="0.024934"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_names}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.465779" elapsed="0.000445"/>
+</kw>
+<var name="${element}">&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff00000042")&gt;</var>
+<status status="PASS" start="2025-01-24T15:12:34.440356" elapsed="0.026002"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2025-01-24T15:12:34.485333" level="INFO">Element '&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff0000004b")&gt;' attribute 'text' value 'People Names' </msg>
+<msg time="2025-01-24T15:12:34.485556" level="INFO">${text} = People Names</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<arg>text</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2025-01-24T15:12:34.466734" elapsed="0.018920"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_names}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.485815" elapsed="0.000367"/>
+</kw>
+<var name="${element}">&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff0000004b")&gt;</var>
+<status status="PASS" start="2025-01-24T15:12:34.466469" elapsed="0.019784"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2025-01-24T15:12:34.505924" level="INFO">Element '&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff0000004c")&gt;' attribute 'text' value 'Dog Names' </msg>
+<msg time="2025-01-24T15:12:34.506153" level="INFO">${text} = Dog Names</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<arg>text</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2025-01-24T15:12:34.486591" elapsed="0.019661"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_names}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.506438" elapsed="0.000393"/>
+</kw>
+<var name="${element}">&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff0000004c")&gt;</var>
+<status status="PASS" start="2025-01-24T15:12:34.486358" elapsed="0.020541"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2025-01-24T15:12:34.528847" level="INFO">Element '&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff0000004d")&gt;' attribute 'text' value 'Ace' </msg>
+<msg time="2025-01-24T15:12:34.529329" level="INFO">${text} = Ace</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<arg>text</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2025-01-24T15:12:34.507222" elapsed="0.022488"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_names}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.530004" elapsed="0.000454"/>
+</kw>
+<var name="${element}">&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff0000004d")&gt;</var>
+<status status="PASS" start="2025-01-24T15:12:34.507004" elapsed="0.023525"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2025-01-24T15:12:34.549281" level="INFO">Element '&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff0000004e")&gt;' attribute 'text' value 'Bandit' </msg>
+<msg time="2025-01-24T15:12:34.549589" level="INFO">${text} = Bandit</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<arg>text</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2025-01-24T15:12:34.530933" elapsed="0.018771"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_names}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.549925" elapsed="0.000415"/>
+</kw>
+<var name="${element}">&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff0000004e")&gt;</var>
+<status status="PASS" start="2025-01-24T15:12:34.530660" elapsed="0.019756"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2025-01-24T15:12:34.571429" level="INFO">Element '&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff0000004f")&gt;' attribute 'text' value 'Cha-Cha' </msg>
+<msg time="2025-01-24T15:12:34.571649" level="INFO">${text} = Cha-Cha</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<arg>text</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2025-01-24T15:12:34.550759" elapsed="0.020994"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_names}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.571915" elapsed="0.000379"/>
+</kw>
+<var name="${element}">&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff0000004f")&gt;</var>
+<status status="PASS" start="2025-01-24T15:12:34.550530" elapsed="0.021950"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2025-01-24T15:12:34.590869" level="INFO">Element '&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff00000050")&gt;' attribute 'text' value 'Deuce' </msg>
+<msg time="2025-01-24T15:12:34.591441" level="INFO">${text} = Deuce</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<arg>text</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2025-01-24T15:12:34.572848" elapsed="0.019000"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_names}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.592213" elapsed="0.000503"/>
+</kw>
+<var name="${element}">&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff00000050")&gt;</var>
+<status status="PASS" start="2025-01-24T15:12:34.572630" elapsed="0.020386"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2025-01-24T15:12:34.615005" level="INFO">Element '&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff00000051")&gt;' attribute 'text' value 'Cat Names' </msg>
+<msg time="2025-01-24T15:12:34.615749" level="INFO">${text} = Cat Names</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<arg>text</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2025-01-24T15:12:34.593873" elapsed="0.022032"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_names}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.616188" elapsed="0.000637"/>
+</kw>
+<var name="${element}">&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff00000051")&gt;</var>
+<status status="PASS" start="2025-01-24T15:12:34.593322" elapsed="0.023631"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2025-01-24T15:12:34.652461" level="INFO">Element '&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff00000052")&gt;' attribute 'text' value 'Fish Names' </msg>
+<msg time="2025-01-24T15:12:34.652807" level="INFO">${text} = Fish Names</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<arg>text</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2025-01-24T15:12:34.617462" elapsed="0.035449"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_names}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.653075" elapsed="0.000295"/>
+</kw>
+<var name="${element}">&lt;appium.webdriver.webelement.WebElement (session="1cbdee95-9b13-4088-8262-1f2dd101677c", element="00000000-0000-033c-ffff-ffff00000052")&gt;</var>
+<status status="PASS" start="2025-01-24T15:12:34.617158" elapsed="0.036286"/>
+</iter>
+<var>${element}</var>
+<value>@{actual_names_elements}</value>
+<status status="PASS" start="2025-01-24T15:12:34.440054" elapsed="0.213435"/>
+</for>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-24T15:12:34.653812" level="INFO">Actual Names: ['Views/Expandable Lists/1. Custom Adapter', 'People Names', 'Dog Names', 'Ace', 'Bandit', 'Cha-Cha', 'Deuce', 'Cat Names', 'Fish Names']</msg>
+<arg>Actual Names: ${actual_names}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.653598" elapsed="0.000333"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${name}' not in ${actual_names}</arg>
+<arg>Fail</arg>
+<arg>Name "${name}" not found in the list!</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.654512" elapsed="0.000458"/>
+</kw>
+<var name="${name}">Ace</var>
+<status status="PASS" start="2025-01-24T15:12:34.654268" elapsed="0.000814"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${name}' not in ${actual_names}</arg>
+<arg>Fail</arg>
+<arg>Name "${name}" not found in the list!</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.655528" elapsed="0.000312"/>
+</kw>
+<var name="${name}">Bandit</var>
+<status status="PASS" start="2025-01-24T15:12:34.655243" elapsed="0.000687"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${name}' not in ${actual_names}</arg>
+<arg>Fail</arg>
+<arg>Name "${name}" not found in the list!</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.656165" elapsed="0.000233"/>
+</kw>
+<var name="${name}">Cha-Cha</var>
+<status status="PASS" start="2025-01-24T15:12:34.656014" elapsed="0.000453"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${name}' not in ${actual_names}</arg>
+<arg>Fail</arg>
+<arg>Name "${name}" not found in the list!</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.656664" elapsed="0.000224"/>
+</kw>
+<var name="${name}">Deuce</var>
+<status status="PASS" start="2025-01-24T15:12:34.656540" elapsed="0.000413"/>
+</iter>
+<var>${name}</var>
+<value>@{expected_names}</value>
+<status status="PASS" start="2025-01-24T15:12:34.654008" elapsed="0.002996"/>
+</for>
+<arg>@{DOG_NAMES_TO_CHECK}</arg>
+<doc>Verify the corresponding names appear.</doc>
+<status status="PASS" start="2025-01-24T15:12:34.393560" elapsed="0.263520"/>
+</kw>
+<doc>Test the "Views" menu opens and the expandability of the element is verified</doc>
+<status status="PASS" start="2025-01-24T15:12:20.426842" elapsed="14.231714"/>
 </test>
-<status status="PASS" start="2025-01-23T16:30:36.465915" elapsed="8.854772"/>
+<status status="PASS" start="2025-01-24T15:12:20.247015" elapsed="14.413111"/>
 </suite>
-<status status="PASS" start="2025-01-23T16:30:36.462640" elapsed="8.859236"/>
+<status status="PASS" start="2025-01-24T15:12:20.243332" elapsed="14.418153"/>
 </suite>
-<status status="PASS" start="2025-01-23T16:30:36.442928" elapsed="8.880059"/>
+<status status="PASS" start="2025-01-24T15:12:20.222416" elapsed="14.440600"/>
 </suite>
 <statistics>
 <total>

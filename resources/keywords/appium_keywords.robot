@@ -59,7 +59,8 @@ Start Appium Session
     ...    deviceName=${DEVICE_NAME}
     ...    automationName=${AUTOMATION_NAME}
     ...    appPackage=${app_package}
-    ...    appActivity=${app_activity}
+    ...    appActivity=${app_activity}    
+    # ...    app=${APP_PATH}
 
 Stop Appium Session
     [Documentation]    Arrêter la session Appium.
